@@ -36,13 +36,18 @@ else {
 }
 
 
-/* window.onoffline = () => {
+window.onoffline = () => {
     info.classList.add("visible");
 }
 window.ononline = () => {
-    if(connection.effectiveType == "3g" || connection.effectiveType == "4g"){
+    if('connection' in navigator) {
+        if(connection.effectiveType == "3g" || connection.effectiveType == "4g"){
+            info.classList.remove("visible");
+        }
+    }
+    else {
         info.classList.remove("visible");
     }
-} */
+}
 
 
