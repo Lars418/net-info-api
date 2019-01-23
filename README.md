@@ -25,7 +25,7 @@ if(connection.effectiveType == "2g" || connection.effectiveType == "slow-2g" || 
 Using this `if`-statement we can detect the `effectiveType` of our connection. As of know the API is still experimental, which can result in some strange behaviour. Beside that not all browsers support all properties of the API. That's the reason why we'll also check if our `rtt` (round trip time) value is above 650ms.
 There are also some other properties like `downlink` or `downlinkMax`, but they (at least for me) didn't seem to work properly enough to use them in this example.
 
-## Check for a change in the connection strength
+### Check for a change in the connection strength
 ```javascript
 connection.onchange = checkConnection;
 
@@ -41,5 +41,5 @@ function checkConnection(e) {
 After we've checked the connection strength on page load the value can (and will probably) change, especially if we're moving. To update our strength we'll have to attach a function to the `onchange` event of our connection. The `if`-statement is almost the same, expect that we're also checking if our device is still `onLine`. We'd assume that our `effectiveType` and/or `rtt` value would also display this to us but the `effectiveType` always gave me an output of `4g` and the `rtt` one of `0` - which both don't seem to be correct.\
 (I haven't included the `onLine` check on page load because - obviously - our page couldn't load if it would be offline.)
 
-## Browser support
+### Browser support
 I know I've mentioned it already but as of know the support isn't too great. Only Chrome and Opera support this **partially** API on desktop devices. The mobile support is a bit better (dumping around 66%), but Safari and Chrome on iOS don't support it (yet).
