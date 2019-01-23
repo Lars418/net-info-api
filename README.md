@@ -40,3 +40,6 @@ function checkConnection(e) {
 ```
 After we've checked the connection strength on page load the value can (and will probably) change, especially if we're moving. To update our strength we'll have to attach a function to the `onchange` event of our connection. The `if`-statement is almost the same, expect that we're also checking if our device is still `onLine`. We'd assume that our `effectiveType` and/or `rtt` value would also display this to us but the `effectiveType` always gave me an output of `4g` and the `rtt` one of `0` - which both don't seem to be correct.\
 (I haven't included the `onLine` check on page load because - obviously - our page couldn't load if it would be offline.)
+
+## Browser support
+I know I've mentioned it already but as of know the support isn't too great. Only Chrome and Opera support this **partially** API on desktop devices. The mobile support is a bit better (dumping around 66%), but Safari and Chrome on iOS don't support it (yet).
