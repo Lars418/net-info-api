@@ -42,4 +42,4 @@ After we've checked the connection strength on page load the value can (and will
 (I haven't included the `onLine` check on page load because - obviously - our page couldn't load if it would be offline.)
 
 ### Browser support
-I know I've mentioned it already but as of know the support isn't too great. Only Chrome and Opera _partially_ support this  API on desktop devices. The mobile support is a bit better (dumping around 66%), but Safari and Chrome on iOS don't support it (yet).
+I know I've mentioned it already but as of know the support isn't too great. Only Chrome and Opera _partially_ support this  API on desktop devices. The mobile support is a bit better (dumping around 66%), but Safari and Chrome on iOS don't support it (yet). More info on [caniuse.com](https://caniuse.com/#feat=netinfo)
