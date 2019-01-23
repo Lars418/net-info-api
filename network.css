@@ -1,0 +1,70 @@
+:root {
+    --gray: rgb(246, 246, 246);
+}
+
+body {
+    font-family: "Helevetica Neue";
+    background: rgb(82, 86, 89);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: .5rem;
+    border: 3px solid black;
+    width: 375px;
+    height: 667px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+div {
+    background: var(--gray);
+    padding: .5rem;
+    margin: .5rem;
+}
+
+h3 {
+    margin: 3.3rem auto 0 auto;
+    text-align: center;
+}
+
+#output {
+    line-height: 1.4;
+}
+
+#info {
+    font-size: 15px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    margin: 0; padding: .5rem;
+    top: 0; left: 0; right: 0;
+    background-image: repeating-linear-gradient(45.5deg, white 1%, white 2%, var(--gray) 1%, var(--gray) 5%);
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-60px);
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    visibility: hidden;
+}
+
+#info p {
+    margin: 0;
+    padding: 0;
+}
+
+#info.visible {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
