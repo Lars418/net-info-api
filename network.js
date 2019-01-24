@@ -36,7 +36,7 @@ else {
 }
 
 
-window.onoffline = () => {
+/*window.onoffline = () => {
     info.classList.add("visible");
 }
 window.ononline = () => {
@@ -48,6 +48,6 @@ window.ononline = () => {
     else {
         info.classList.remove("visible");
     }
-}
+}*/
 
 
